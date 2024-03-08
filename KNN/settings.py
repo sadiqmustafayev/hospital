@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-rh87(0_ed1^!%slec7ug!eafc)l_c6yeg*e6&gp&5h@nl@s8t2
 # SECURITY WARNING: don't run with debug turned on in production!
 # settings.py
 DEBUG = True
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['sadiqmustafayev.github.io','127.0.0.1', 'localhost']
 
 # # Error handlers
 # handler404 = 'path.to.your.views.error'
@@ -237,4 +237,3 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_ROOT = '/home/sadiq/Documents/Hospital-Project/hospital/static/'
 
 
-ALLOWED_HOSTS = ['sadiqmustafayev.github.io','127.0.0.1', 'localhost']
