@@ -1,0 +1,91 @@
+{% load static %} {% load i18n %} 
+
+
+<header class="header-area">
+	<div class="container-md">
+		<div class="row">
+			<div class="col-12">
+				<nav class="header-navbar">
+					<div class="header-logo">
+						<a href="{% url 'home' %}">
+							<img src="{{setting.logo.url}}" alt="Logo">
+						</a>
+					</div>
+					<!DOCTYPE html>
+					<html>
+						<form id="languageForm" action="{% url 'set_language' %}" method="post" style="display: block;"> {% csrf_token %} <input type="hidden" name="next" value="{{ request.path }}">
+							<select style="width: 50px; height: 30px; border-radius: 15%; border: none; color: rgb(112, 58, 58); font-size: 18px;" name="language" onchange="this.form.submit()"> {% get_current_language as LANGUAGE_CODE %} {{ LANGUAGE_CODE }} {% get_available_languages as LANGUAGES %} {% get_language_info_list for LANGUAGES as languages %} {% for language in languages %} <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %}selected{% endif %}>
+									{{ language.code }}
+								</option> {% endfor %} </select>
+						</form>
+						
+					</html>
+					<div class="header-nav">
+						<div class="header-contact-number d-none d-lg-block">
+							<span>Emergency Line: <a href="tel:{{setting.number1}}">{{setting.number1}}</a>
+							</span>
+						</div>
+						<a class="mobile-menu" href="#menu">
+							<span></span>
+						</a>
+						<nav class="menu" id="menu">
+							<ul class="nav-list">
+								<li class="nav-item">
+									<a class="nav-link" href="{% url 'home' %}">{% trans 'Home' %}</a>
+								</li>
+								<li> {% if perms.Subscriber.can_send_email %} </li class="nav-item">
+									<a class="nav-link" href="{% url 'send_email' %}">{% trans 'Email' %}</a>
+								</li> {% endif %}
+								<li class="nav-item">
+									<a class="nav-link" href="{% url 'about' %}">{% trans 'About' %}</a>
+								</li>
+								<li class="nav-item menu-dropdown">
+									<a class="nav-link">{% trans 'Raport' %}</a>
+									<ul class="sub-menu">
+										<li>
+											<a href="{% url 'rapor_search' %}" style="color: black;">{% trans 'Search Raport' %}</a>
+										</li> {% if perms.raport.can_add_raport %} <li class="nav-item">
+											<a class="nav-link" href="{% url 'rapor_add' %}" style="color: black;">{% trans 'Add Raport' %}</a>
+											<a class="nav-link" href="{% url 'rapor_list' %}" style="color: black;">{% trans 'Raport LIst' %}</a>
+										</li> {% endif %}
+									</ul>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="{% url 'doctor' %}">{% trans 'Doctors' %}</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="{% url 'blog' %}">{% trans 'Blog' %}</a>
+								</li>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="{% url 'contact' %}">{% trans 'Contact' %}</a>
+								</li>
+								<li class="nav-item"> {% if user.is_authenticated %}
+								<li class="nav-item menu-dropdown black-text">
+									<a class="nav-link">{% trans 'Account' %}</a>
+									<ul class="sub-menu">
+										<form method="POST" action="{% url 'logout' %}">
+											<button type="submit" class="nav-link btn btn-link text-black ">{% trans 'Logout' %}</button>
+											<a class="nav-link" href="{% url 'profile_edit' %}" style="color:black;">{% trans 'Profile' %}</a>											
+									</ul>
+								</li>
+								<li class="nav-item"> {% csrf_token %} </form>
+								</li> {% else %} <li class="nav-item menu-dropdown black-text">
+									<a class="nav-link">{% trans 'Account' %}</a>
+									<ul class="sub-menu black-text">
+										<a class="nav-link" href="{% url 'login' %}" style="color:black;">{% trans 'Login' %}</a>
+										<a class="nav-link" href="{% url 'register' %}" style="color:black;">{% trans 'Register' %}</a>
+									</ul>
+								</li>
+								</li> {% endif %} </li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header-btn d-none d-xl-block">
+						<a href="{% url 'appointment' %}" class="btn btn-outline-white btn-xl btn-round">{% trans 'Book Appointment' %}</a>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+</header>

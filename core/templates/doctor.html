@@ -1,0 +1,138 @@
+{% extends 'index.html' %} {% load static custom_tags %} {% load i18n %} {% block content %}
+	<section class="counter-area" style="padding-top: 50px;padding-bottom: 20px;">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="counter-wrapper counter-wrapper-2" data-cues="slideInRight" data-delay="5">
+						<a href="{% url 'doctor' %}">
+							<div class="counter-item">
+								<h2 class="counter counter-number">{{ doctor_count }} +</h2>
+								<span class="counter-text">Expert Doctors</span>
+							</div>
+						</a>
+						<div class="counter-item">
+							<h2 class="counter counter-number">{{ user_count }}+</h2>
+							<span class="counter-text">Total Registered User</span>
+						</div>
+						<div class="counter-item">
+							<h2 class="counter counter-number">{{ contact_count }}+</h2>
+							<span class="counter-text">Online Contact</span>
+						</div>
+						<div class="counter-item">
+							<h2 class="counter counter-number">{{ report_count }}+</h2>
+							<span class="counter-text">Online Report</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	
+	<form action="{% url 'search_doctors' %}" method="GET">
+		<div class="input-group" style="width: 400px;">
+			<input type="text" class="form-control" name="q" placeholder="Search Doctor by name..." style="height: 40px; font-size: 16px; padding: 10px;" pattern=".{3,}" title="Please enter at least 3 characters">
+			<div class="input-group-append">
+				<button class="btn btn-primary" type="submit" style="height: 4px; font-size: 4px; padding: 4px;"></button>
+				</button>
+			</div>
+		</div>
+	</form>
+	<section class="doctor-area section-padding">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-6 offset-xl-3">
+					<div class="section-title text-center mb-3">
+						<span class="subtitle wow animate__animated animate__fadeInUp">Our Doctor</span>
+					</div>
+				</div>
+			</div>
+			<div class="row" data-cues="slideInLeft" data-delay="50"> {% for doctor in page_obj %} <div class="col-sm-6 col-lg-4">
+					<div class="doctor-item">
+						<div class="doctor-thumb">
+							<div class="doctor-img">
+								<a href="{% url 'doctor_details' doctor.slug %}">
+									<img src="{{ doctor.image.url }}" alt="Image" width="350" height="300">
+								</a>
+							</div>
+							<ul class="social-link">
+								<li>
+									<a href="{{ doctor.facebook }}">
+										<i class="fab fa-facebook-f"></i>
+									</a>
+								</li>
+								<li>
+									<a href="{{ doctor.twitter }}">
+										<i class="fab fa-twitter"></i>
+									</a>
+								</li>
+								<li>
+									<a href="{{ doctor.instagram }}">
+										<i class="fab fa-instagram"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="doctor-content">
+							<h3 class="title">
+								<a href="{% url 'doctor_details' doctor.slug %}">{{ doctor.name }}</a>
+							</h3>
+							<span>{{doctor.positions}}</span>
+							<a href="{% url 'doctor_details' doctor.slug %}" class="doctor-link">
+								<i class="fas fa-arrow-right"></i>
+							</a>
+							<div class="doctor-shape">
+								<img src="{% static 'img/shape/shape15.png' %}" alt="Shape">
+							</div>
+						</div>
+					</div>
+				</div> {% endfor %} <div class="pagination justify-content-center">
+					<span class="step-links"> {% if page_obj.has_previous %} <a href="?page=1">&laquo; first</a>
+						<a href="?page={{ page_obj.previous_page_number }}">previous</a> {% endif %} <span class="current-page"> Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}. </span> {% if page_obj.has_next %} <a href="?page={{ page_obj.next_page_number }}">next</a>
+						<a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a> {% endif %} </span>
+				</div>
+				<style>
+					.pagination {
+						text-align: center;
+						margin-top: 30px;
+					}
+
+					.pagination a {
+						color: #333;
+						display: inline-block;
+						margin-right: 5px;
+						padding: 6px 12px;
+						border: 1px solid #ccc;
+						border-radius: 5px;
+					}
+
+					.pagination a:hover {
+						background-color: #ccc;
+					}
+
+					.pagination .current-page {
+						font-weight: bold;
+						background-color: #333;
+						color: #fff;
+						display: inline-block;
+						padding: 6px 12px;
+						border: 1px solid #ccc;
+						border-radius: 5px;
+					}
+
+					.pagination .step-links a {
+						display: inline-block;
+						margin-right: 5px;
+						padding: 6px 12px;
+						border: 1px solid #ccc;
+						border-radius: 5px;
+					}
+
+					.pagination .step-links a:hover {
+						background-color: #ccc;
+					}
+				</style>
+			</div>
+		</div>
+	</section>
+</main> {% endblock %}

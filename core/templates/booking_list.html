@@ -1,0 +1,187 @@
+{%extends  'index.html'%} {%load static%} {% load i18n %} {% block content %}
+<!-- Banner Section  -->
+<div class="banner-area inner-banner" style="background-image: url('assets/img/bg/bg2.png');">
+	<div class="container">
+		<div class="row align-items-center justify-content-center">
+			<div class="col-12">
+				<div class="breadcrumbs">
+					<nav aria-label="breadcrumb text-center">
+						<h2 class="text-white">Booking List</h2>
+						<ol class="breadcrumb justify-content-center">
+							<li class="breadcrumb-item">
+								<a href="index-2.html">Home</a>
+							</li>
+							<li class="breadcrumb-item active" aria-current="page">Booking List</li>
+						</ol>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Banner Section  -->
+<!-- Counter Section  -->
+<section class="counter-area">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="counter-wrapper counter-wrapper-2">
+					<a href="{% url 'doctor' %}">
+						<div class="counter-item">
+							<h2 class="counter counter-number">{{ doctor_count }} +</h2>
+							<span class="counter-text">Expert Doctors</span>
+						</div>
+					</a>
+					<div class="counter-item">
+						<h2 class="counter counter-number">{{ user_count }}+</h2>
+						<span class="counter-text">Total Registered User</span>
+					</div>
+					<div class="counter-item">
+						<h2 class="counter counter-number">{{ contact_count }}+</h2>
+						<span class="counter-text">Online Contact</span>
+					</div>
+					<div class="counter-item">
+						<h2 class="counter counter-number">{{ report_count }}+</h2>
+						<span class="counter-text">Online Report</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Counter Section  -->
+<!-- Booking List Section  -->
+<section class="booking-list-area section-padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="doctor-booking-list">
+					<div class="doctor-details">
+						<div class="doctor-details-img">
+							<img src="assets/img/booking-list/booking-list.png" alt="">
+						</div>
+						<div class="doctor-details-content">
+							<h3>Dr. Tomas Mulli</h3>
+							<span>Doctor of Medicine</span>
+							<p>Lorem Ipsum available, but the majority have suffered alteration in some form by injected humour, or randomized words which don't look even slightly believable.</p>
+							<ul class="footer-social">
+								<li>
+									<a href="#">
+										<i class="fab fa-facebook-f"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="fab fa-twitter"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="fab fa-instagram"></i>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="fab fa-linkedin-in"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="booking-table table-responsive">
+						<table class="table table-bordered border-primary">
+							<thead>
+								<tr>
+									<th class="table-width" scope="col">Name</th>
+									<th class="table-width" scope="col">Ages</th>
+									<th class="table-width" scope="col">Problem</th>
+									<th class="table-width" scope="col">Contact</th>
+									<th class="table-width" scope="col">Date & Time</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<h5>Jackson Levi</h5>
+										<span>( New York)</span>
+									</td>
+									<td>
+										<h5>34</h5>
+									</td>
+									<td>
+										<p>Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour randomised words.</p>
+									</td>
+									<td>
+										<h5>+ 00 12345 6789</h5>
+									</td>
+									<td>
+										<h5>7th Nov, 21- 8 pm</h5>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<h5>Victoria Lily</h5>
+										<span>( New Jersy)</span>
+									</td>
+									<td>
+										<h5>25</h5>
+									</td>
+									<td>
+										<p>Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour randomised words.</p>
+									</td>
+									<td>
+										<h5>+ 00 98765 4321</h5>
+									</td>
+									<td>
+										<h5>14th Nov, 21- 9 am</h5>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<h5>Gabriella Eva</h5>
+										<span>( New York)</span>
+									</td>
+									<td>
+										<h5>64</h5>
+									</td>
+									<td>
+										<p>Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour randomised words.</p>
+									</td>
+									<td>
+										<h5>+ 00 14689 1234</h5>
+									</td>
+									<td>
+										<h5>15th Nov, 21- 10 am</h5>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<h5>Alex Carry</h5>
+										<span>( New York)</span>
+									</td>
+									<td>
+										<h5>40</h5>
+									</td>
+									<td>
+										<p>Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour randomised words.</p>
+									</td>
+									<td>
+										<h5>+ 00 54321 6789</h5>
+									</td>
+									<td>
+										<h5>16th Nov, 21- 11 pm</h5>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<img class="position-absolute bottom-0 start-0" src="assets/img/shape/shape15.png" alt="Shape">
+				</div>
+			</div>
+		</div>
+	</div>
+	<img class="shape1" src="assets/img/error/Graphic1.png" alt="">
+	<img class="shape2" src="assets/img/error/Graphic2.png" alt="">
+</section>
+<!-- Booking List Section  -->
+</main> {% endblock %}

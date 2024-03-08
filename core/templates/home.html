@@ -1,0 +1,76 @@
+{%extends 'index.html'%} {%load static%} {% block content %} {% load i18n %}
+<!-- Banner Section  -->
+
+<div class="banner-area overflow-hidden" style="background-image: url('assets/img/banner/banner.png');">
+	<div class="container">
+		<div class="row flex-column-reverse flex-md-row align-items-center">
+			<div class="col-md-6">
+				<div class="banner-left-content">
+					<h1 data-cue="slideInLeft" data-duration="1000">{{ setting.slogan }} </h1>
+					<form method="post" action="#">
+						<!-- {% csrf_token %} -->
+						<div class="form-group row">
+							<!-- <label for="{{ form.email.id_for_label }}" class="col-sm-2 col-form-label">Email address</label> -->
+							<div class="col-sm-10">
+								<!-- {% for field in Subscriber %}  -->
+								<!-- {{ field }} -->
+							<!-- {% endfor %} -->
+						</div>
+
+						  
+				</div>
+				<div class="form-group row">
+					<div class="col-sm-10 offset-sm-2">
+						<!-- <button type="submit" class="btn btn-primary">Subscribe</button> -->
+					</div>
+				</div>
+				</form>
+				<a href="{% url 'service' %}" class="btn btn-outline-white btn-xl btn-round" data-cue="slideInLeft" data-duration="3000">Explore Our Services</a>
+				<div class="counter-wrapper d-none d-md-flex" data-cues="slideInLeft" data-duration="2000">
+					<a href="{% url 'doctor' %}">
+						<div class="counter-item">
+							<h2 class="counter counter-number">{{ doctor_count }} +</h2>
+							<span class="counter-text">Expert Doctors</span>
+						</div>
+					</a>
+					<div class="counter-item">
+						<h2 class="counter counter-number">{{ user_count }}+</h2>
+						<span class="counter-text">Total Registered User</span>
+					</div>
+					<div class="counter-item">
+						<h2 class="counter counter-number">{{ contact_count }}+</h2>
+						<span class="counter-text">Online Contact</span>
+					</div>
+					<div class="counter-item">
+						<h2 class="counter counter-number">{{ report_count }}+</h2>
+						<span class="counter-text">Online Report</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		 
+		<div class="col-md-6">
+			<div class="banner-right-content">
+				<div class="banner-img" data-cues="slideInRight" data-duration="3000">
+					<img src="{% static 'img/banner/banner-img.png' %}" alt="Banner Image">
+					<div class="text-box-wrapper">
+						<div class="dr-image">
+							<img src="{% static 'img/banner/dr.png' %}" alt="Image">
+						</div>
+						<div class="dr-info">
+							<h5>Dr. Jony Bristow</h5>
+							<span>24 Hours Online Active</span>
+						</div>
+					</div>
+				</div>
+				<img src="{% static 'img/shape/shape2.png' %}" alt="Shape Image" class="shape shape3">
+			</div>
+		</div>
+	</div>
+</div>
+<img src="{% static 'img/shape/overlay.png' %}" alt="Overlay" class="shape shape1">
+</div>
+</section>
+<!-- Booking Section -->
+
+</main> {% endblock %}

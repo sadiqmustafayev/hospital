@@ -1,0 +1,65 @@
+{% extends 'index.html' %} {% load i18n %} {% block content %} 
+<div class="container mt-5"></div><form action="{% url 'rapor_list' %}" method="get">
+	<label for="search" style="font-weight: bold;">Search:</label>
+	<input type="text" name="search" id="search" style="margin-left: 10px; padding: 5px; border-radius: 5px; border: 1px solid #ccc;">
+	<button type="submit" style="background-color: #4CAF50; color: white; border-radius: 5px; border: none; padding: 8px 16px; margin-left: 10px; cursor: pointer;">{% trans 'Search & Clear' %}</button> {% trans 'Total Report Count' %} - {{ report_count }}
+</form>
+<ul> {% for rapor in page_obj %} <li>
+		<strong style="color:black">Name Surname:</strong>
+		<span style="color:black">{{ rapor.name_surname }}</span>
+		<strong style="color:black">ID:</strong>
+		<a href="{% url 'rapor_detay' rapor.id %}">
+			<strong style="color:black">{{ rapor.id }}</strong>
+		</a>
+	</li>                                                                                                 
+	<li></li> {% empty %} <li>
+		<p style="color: red; font-weight: bold;">{% trans 'No results found. Please enter another search term.' %}</p>
+	</li> {% endfor %}
+</ul>
+<div class="pagination justify-content-center">
+	<span class="step-links"> {% if page_obj.has_previous %} <a href="?page=1">&laquo; first</a>
+		<a href="?page={{ page_obj.previous_page_number }}">previous</a> {% endif %} <span class="current-page"> Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}. </span> {% if page_obj.has_next %} <a href="?page={{ page_obj.next_page_number }}">next</a>
+		<a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a> {% endif %} </span>
+</div>
+</div>
+<style>
+	.pagination {
+		text-align: center;
+		margin-top: 30px;
+	}
+
+	.pagination a {
+		color: #333;
+		display: inline-block;
+		margin-right: 5px;
+		padding: 6px 12px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+	}
+
+	.pagination a:hover {
+		background-color: #ccc;
+	}
+
+	.pagination .current-page {
+		font-weight: bold;
+		background-color: #333;
+		color: #fff;
+		display: inline-block;
+		padding: 6px 12px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+	}
+
+	.pagination .step-links a {
+		display: inline-block;
+		margin-right: 5px;
+		padding: 6px 12px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+	}
+
+	.pagination .step-links a:hover {
+		background-color: #ccc;
+	}
+</style> {% endblock %}

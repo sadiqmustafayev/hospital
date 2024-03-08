@@ -1,0 +1,78 @@
+{%extends  'index.html'%} {%load static%} {% load i18n %} {% block content %} <main>
+	<!-- Banner Section  -->
+	<div class="banner-area inner-banner" style="background-image: url('assets/img/bg/bg2.png');">
+		<div class="container">
+			<div class="row align-items-center justify-content-center">
+				<div class="col-12">
+					<div class="breadcrumbs">
+						<nav aria-label="breadcrumb text-center">
+							<h2 class="text-white">Error</h2>
+							<ol class="breadcrumb justify-content-center">
+								<li class="breadcrumb-item">
+									<a href="index-2.html">Home</a>
+								</li>
+								<li class="breadcrumb-item active" aria-current="page">Error</li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Banner Section  -->
+	<!-- Counter Section  -->
+	<section class="counter-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="counter-wrapper counter-wrapper-2">
+						<a href="{% url 'doctor' %}">
+							<div class="counter-item">
+								<h2 class="counter counter-number">{{ doctor_count }} +</h2>
+								<span class="counter-text">Expert Doctors</span>
+							</div>
+						</a>
+						<div class="counter-item">
+							<h2 class="counter counter-number">{{ user_count }}+</h2>
+							<span class="counter-text">Total Registered User</span>
+						</div>
+						<div class="counter-item">
+							<h2 class="counter counter-number">{{ contact_count }}+</h2>
+							<span class="counter-text">Online Contact</span>
+						</div>
+						<div class="counter-item">
+							<h2 class="counter counter-number">{{ report_count }}+</h2>
+							<span class="counter-text">Online Report</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Counter Section  -->
+	<!-- Error Area -->
+	<section class="error-area section-padding">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="error-wrapper">
+						<div class="error-img">
+							<img src="assets/img/error/Character.png" alt="">
+						</div>
+						<div class="error-button">
+							<a href="index-2.html" class="btn btn-blue btn-xl btn-round">Go to Home Page</a>
+						</div>
+					</div>
+					<img class="shape1" src="assets/img/error/Graphic1.png" alt="">
+					<img class="shape2" src="assets/img/error/Graphic2.png" alt="">
+					<img class="shape3" src="assets/img/error/Graphic.png" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Error Area -->
+</main> {% endblock %}
+
+
+
+

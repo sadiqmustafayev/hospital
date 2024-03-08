@@ -1,0 +1,41 @@
+<!doctype html> {% load static %} {% load i18n %} <html class="no-js" lang="tr"></html>
+<head>
+	<meta charset="utf-8">
+	<title>Mediclinis - Health and Medical HTML Template</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.png' %} > -->
+	<!-- <link rel="apple-touch-icon" href="{% static 'icon.png"> -->
+	<!-- Place favicon.ico in the root directory -->
+	<link rel="stylesheet" href="{% static 'css/scrollCue.css' %} ">
+	<link rel="stylesheet" href="{% static 'css/normalize.css' %} ">
+	<link rel="stylesheet" href="{% static 'css/all.min.css' %} ">
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %} " />
+	<link rel="stylesheet" href="{% static 'css/bootstrap-icons.css' %} " />
+	<link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %} " />
+	<link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %} ">
+	<link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css' %} ">
+	<link rel="stylesheet" href="{% static 'css/nice-select.css' %} ">
+	<link rel="stylesheet" href="{% static 'css/mmenu-light.css' %} ">
+	<link rel="stylesheet" href="{% static 'css/style.css' %} "> {% block extrahead %}
+	<link href="{% static 'css/dark.css' %} " type="text/css" media="(prefers-color-scheme: dark)" rel="stylesheet"> {% endblock %}
+</head>
+<body> {% include "partials/_navbar.html" %} 
+	{% block content %} 
+	{% endblock %}
+	 {% include "partials/_footer.html" %} <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+	<script src="{% static 'js/app.js' %}"></script>
+	<script src="{% static 'js/jquery-3.6.0.min.js' %} "></script>
+	<script src="{% static 'js/modernizr-3.11.2.min.js' %} "></script>
+	<script src="{% static 'js/mmenu-light.js' %} "></script>
+	<script src="{% static 'js/popper.min.js' %} "></script>
+	<script src="{% static 'js/bootstrap.min.js' %} "></script>
+	<script src="{% static 'js/swiper-bundle.min.js' %} "></script>
+	<script src="{% static 'js/jquery.fancybox.js' %} "></script>
+	<script src="{% static 'js/jquery.waypoints.min.js' %} "></script>
+	<script src="{% static 'js/counterup2.min.js' %} "></script>
+	<script src="{% static 'js/jquery.nice-select.min.js' %} "></script>
+	<script src="{% static 'js/scrollCue.min.js' %} "></script>
+	<script src="{% static 'js/main.js' %} "></script>
+</body>
+</html>

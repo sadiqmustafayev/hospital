@@ -1,0 +1,51 @@
+{% extends 'index.html' %} {% load static %} {% block content %} {% load i18n %} <section class="doctor-area section-padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-6 offset-xl-3">
+				<div class="section-title text-center mb-3">
+					<span class="subtitle wow animate__animated animate__fadeInUp">Search results for "{{ query }}"</span>
+				</div>
+			</div>
+		</div>
+		<div class="row"> {% if doctors %} {% for doctor in doctors %} <div class="col-sm-6 col-lg-4">
+				<div class="doctor-item">
+					<div class="doctor-thumb">
+						<a href="{% url 'doctor_details' doctor.slug %}">
+							<img src="{{ doctor.image.url }}" alt="Image" width="350" height="300">
+						</a>
+						<ul class="social-link">
+							<li>
+								<a href="{{ doctor.facebook }}">
+									<i class="fab fa-facebook-f"></i>
+								</a>
+							</li>
+							<li>
+								<a href="{{ doctor.twitter }}">
+									<i class="fab fa-twitter"></i>
+								</a>
+							</li>
+							<li>
+								<a href="{{ doctor.instagram }}">
+									<i class="fab fa-instagram"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="doctor-content">
+						<h3 class="title">
+							<a href="{% url 'doctor_details' doctor.slug %}">{{ doctor.name }}</a>
+						</h3>
+						<span>{{ doctor.Positions }}</span>
+						<a href="{% url 'doctor_details' doctor.slug %}" class="doctor-link">
+							<i class="fas fa-arrow-right"></i>
+						</a>
+						<div class="doctor-shape">
+							<img src="{% static 'img/shape/shape15.png' %}" alt="Shape">
+						</div>
+					</div>
+				</div>
+			</div> {% endfor %} {% else %} <div class="col-md-12">
+				<p style="color:black;">No results found for "{{ query }}"</p>
+			</div> {% endif %} </div>
+	</div>
+</section> {% endblock %}

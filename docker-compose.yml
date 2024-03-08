@@ -1,0 +1,26 @@
+version: '3.1'
+
+services: 
+    db:
+      image: postgres
+      restart: always
+      ports:
+        - "5432:5432"
+      volumes:
+        -  ./data:/var/lib/postgresql/data
+      environment:
+        POSTGRES_PASSWORD: KNN
+        POSTGRES_USER: KNN
+        POSTGRES_DB: KNN
+
+    adminer:
+        image: adminer
+        restart: always
+        ports:
+            - 8080:8080
+
+    redis:
+        image: redis
+        restart: always
+        ports:
+            - 6379:6379

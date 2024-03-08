@@ -1,0 +1,377 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-27 20:40+0000\n"
+"PO-Revision-Date: 2023-07-14 19:35+0000\n"
+"Last-Translator:   <sadiq_mustafayev@mail.ru>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.9.8\n"
+
+#: KNN/settings.py:168
+msgid "English"
+msgstr "İngiliscə"
+
+#: KNN/settings.py:169
+msgid "Azerbaijani"
+msgstr "Azərbaycanca"
+
+#: baseuser/forms.py:19
+msgid "Required. Enter a valid email address."
+msgstr "Tələb olunur. Etibarlı e-poçt ünvanı daxil edin."
+
+#: baseuser/forms.py:30 baseuser/forms.py:130
+msgid "First Name"
+msgstr "Ad"
+
+#: baseuser/forms.py:32 baseuser/forms.py:42
+msgid "Only alphabetical characters are allowed."
+msgstr "Yalnız əlifba simvollarına icazə verilir."
+
+#: baseuser/forms.py:40 baseuser/forms.py:143
+msgid "Last Name"
+msgstr "Soyad"
+
+#: baseuser/forms.py:49 baseuser/views.py:124
+msgid "Password"
+msgstr "Şifrə"
+
+#: baseuser/forms.py:58 baseuser/forms.py:200
+msgid "Confirm Password"
+msgstr "Şifrə Təstiqi"
+
+#: baseuser/forms.py:60
+msgid "Enter the same password as before, for verification."
+msgstr "Doğrulama üçün əvvəlki parolu daxil edin."
+
+#: baseuser/forms.py:85
+msgid "Your password must contain at least 8 characters."
+msgstr "Parolunuz ən azı 8 simvoldan ibarət olmalıdır."
+
+#: baseuser/forms.py:88
+msgid "Your password must contain at least one digit."
+msgstr "Parolunuz ən azı bir rəqəmdən ibarət olmalıdır."
+
+#: baseuser/forms.py:91
+msgid "Your password can't be entirely alphabetical."
+msgstr "Parolunuz tamamilə əlifba sırası ilə ola bilməz."
+
+#: baseuser/forms.py:94
+msgid "Your password can't be entirely numeric."
+msgstr "Parolunuz tam rəqəm ola bilməz."
+
+#: baseuser/forms.py:97
+msgid "Your password must start with a capital letter."
+msgstr "Şifrəniz böyük hərflə başlamalıdır."
+
+#: baseuser/forms.py:125
+msgid "Please enter only alphabets for your first name"
+msgstr "Zəhmət olmasa, adınız üçün yalnız əlifbaları daxil edin"
+
+#: baseuser/forms.py:138
+msgid "Please enter only alphabets for your last name"
+msgstr "Zəhmət olmasa soyadınız üçün yalnız əlifbalar daxil edin"
+
+#: baseuser/forms.py:150
+msgid "Email Address"
+msgstr "E-poçt ünvanı"
+
+#: baseuser/forms.py:164
+msgid "Phone Number"
+msgstr "Telefon Nomresi"
+
+#: baseuser/forms.py:171
+msgid "Location"
+msgstr "Vəzifə"
+
+#: baseuser/forms.py:180
+msgid "New Password"
+msgstr "Yeni Şifrə"
+
+#: baseuser/forms.py:184
+msgid "Optional. Enter a strong password with at least 8 characters."
+msgstr "Könüllü. Ən azı 8 simvoldan ibarət güclü parol daxil edin."
+
+#: baseuser/forms.py:189
+msgid ""
+"Password must contain at least 8 characters with at least one uppercase "
+"letter, one lowercase letter, and one digit."
+msgstr ""
+"Parol ən azı bir böyük hərf, bir kiçik hərf və bir rəqəmdən ibarət ən azı 8 "
+"simvoldan ibarət olmalıdır."
+
+#: baseuser/forms.py:191
+msgid "invalid_password"
+msgstr "yalnış_şirfə"
+
+#: baseuser/forms.py:203
+msgid "Optional. Re-enter the password to confirm."
+msgstr "Könüllü. Təsdiq etmək üçün parolu yenidən daxil edin."
+
+#: baseuser/forms.py:219 baseuser/forms.py:222
+msgid "This field is required."
+msgstr "Bu xananın doldurulması məcburidir."
+
+#: baseuser/forms.py:226
+msgid "Passwords do not match. Please try again."
+msgstr "Şifrəniz Uyğun deyil"
+
+#: baseuser/templates/profile_edit.html:19
+msgid "Delete account"
+msgstr "Hesab Silme"
+
+#: baseuser/views.py:69
+msgid "Your profile was updated successfully."
+msgstr "Profiliniz uğurla yeniləndi."
+
+#: baseuser/views.py:79
+msgid "Superuser"
+msgstr "Superuser"
+
+#: baseuser/views.py:81
+msgid "Staff"
+msgstr "Staff"
+
+#: baseuser/views.py:83
+msgid "User"
+msgstr "User"
+
+#: baseuser/views.py:100
+msgid "yes"
+msgstr "Beli"
+
+#: baseuser/views.py:112
+msgid "Your password is incorrect."
+msgstr "Sizin Şifrəniz doğru deyil"
+
+#: baseuser/views.py:115
+msgid "You do not have permission to delete this account."
+msgstr "Bu hesabı silmək üçün icazəniz yoxdur."
+
+#: baseuser/views.py:118
+msgid "You must confirm that you want to delete your account."
+msgstr "Hesabınızı silmək istədiyinizi təsdiq etməlisiniz."
+
+#: core/models.py:56
+msgid "Setting"
+msgstr "Tənzimləmə"
+
+#: core/models.py:57
+msgid "Settings"
+msgstr "Tənzimləmələr"
+
+#: core/models.py:73 core/models.py:74
+msgid "News"
+msgstr "Xəbərlər"
+
+#: core/models.py:84
+msgid "Category"
+msgstr "Kateqoriyalar"
+
+#: core/models.py:94
+msgid "Tag"
+msgstr "Etiket"
+
+#: core/models.py:105
+msgid "NewsTag"
+msgstr "Xəbər etiketi"
+
+#: core/models.py:117 core/models.py:118
+msgid "Page"
+msgstr "Səhifə"
+
+#: core/models.py:132
+msgid "Story"
+msgstr "Hekayə"
+
+#: core/models.py:133
+msgid "Stories"
+msgstr "Hekayələr"
+
+#: core/models.py:159 core/models.py:160
+msgid "Blogs"
+msgstr "Bloqlar"
+
+#: core/models.py:188 core/models.py:189
+#: core/templates/partials/_navbar.html:61
+msgid "Contact"
+msgstr "Əlaqə"
+
+#: core/models.py:199
+msgid "Position"
+msgstr "Vəzifə"
+
+#: core/models.py:200 core/templates/doctor_details.html:99
+msgid "Positions"
+msgstr "Vəzifələr"
+
+#: core/models.py:230
+msgid "Doctor"
+msgstr "Həkim"
+
+#: core/models.py:231 core/templates/partials/_navbar.html:54
+msgid "Doctors"
+msgstr "Həkimlər"
+
+#: core/templates/appointment.html:6
+msgid "Coming Soon"
+msgstr "Tezliklə"
+
+#: core/templates/appointment.html:7
+msgid "We are working hard to bring something amazing to you. Stay tuned!"
+msgstr "Sizə heyrətamiz bir şey gətirmək üçün çox çalışırıq. Bizimlə qalın!"
+
+#: core/templates/base_site.html:1
+msgid "Django site admin"
+msgstr "Django sayt admini"
+
+#: core/templates/base_site.html:2
+msgid "Django administration"
+msgstr "Django administrasiyası"
+
+#: core/templates/doctor_details.html:103
+msgid "Experience"
+msgstr "Təcrübə"
+
+#: core/templates/doctor_details.html:107
+#| msgid "Ages"
+msgid "Age"
+msgstr "Yaş"
+
+#: core/templates/doctor_details.html:115
+msgid "Phone"
+msgstr "Telefon"
+
+#: core/templates/doctor_details.html:121
+msgid "Educational History"
+msgstr "Təhsil Tarixi"
+
+#: core/templates/partials/_footer.html:5
+msgid "Enter your email"
+msgstr "Emailinizi daxil edin"
+
+#: core/templates/partials/_footer.html:6
+msgid "Subscribe Now"
+msgstr "İndi abunə olun"
+
+#: core/templates/partials/_navbar.html:34
+msgid "Home"
+msgstr "Əsas Sehife"
+
+#: core/templates/partials/_navbar.html:37
+msgid "Email"
+msgstr "Email"
+
+#: core/templates/partials/_navbar.html:40
+msgid "About"
+msgstr "Haqqımızda"
+
+#: core/templates/partials/_navbar.html:43
+msgid "Raport"
+msgstr "Online Neticeler"
+
+#: core/templates/partials/_navbar.html:46
+msgid "Search Raport"
+msgstr "Netice Axtarmaq"
+
+#: core/templates/partials/_navbar.html:48
+msgid "Add Raport"
+msgstr "Netice Elave Etmek"
+
+#: core/templates/partials/_navbar.html:49
+msgid "Raport LIst"
+msgstr "Netice Melumatlari"
+
+#: core/templates/partials/_navbar.html:57
+msgid "Blog"
+msgstr "Blog"
+
+#: core/templates/partials/_navbar.html:65
+#: core/templates/partials/_navbar.html:74
+msgid "Account"
+msgstr "Hesab"
+
+#: core/templates/partials/_navbar.html:68
+msgid "Logout"
+msgstr "Çıxış"
+
+#: core/templates/partials/_navbar.html:69
+msgid "Profile"
+msgstr "Hesab"
+
+#: core/templates/partials/_navbar.html:76
+msgid "Login"
+msgstr "Daxil ol"
+
+#: core/templates/partials/_navbar.html:77
+msgid "Register"
+msgstr "Qeydiyyat"
+
+#: core/views.py:214
+msgid "New Contact Form Received"
+msgstr "Yeni Əlaqə Forması Alındı"
+
+#: core/views.py:235 core/views.py:244
+msgid "Message has been sent successfully!"
+msgstr "Mesaj uğurla göndərildi!"
+
+#: core/views.py:329
+msgid "Email has been sent successfully!"
+msgstr "E-poçt uğurla göndərildi!"
+
+#: raport/forms.py:11
+msgid "Name Surname"
+msgstr "Ad Soyad"
+
+#: raport/forms.py:16
+msgid "Description"
+msgstr "Vəzifə"
+
+#: raport/templates/rapor_list.html:4
+msgid "Search & Clear"
+msgstr "Axtar & Temizle"
+
+#: raport/templates/rapor_list.html:4
+msgid "Total Report Count"
+msgstr "Ümumi Hesabat Sayı"
+
+#: raport/templates/rapor_list.html:15
+msgid "No results found. Please enter another search term."
+msgstr "Nəticə tapılmadı. Xahiş edirik başqa bir axtarış termini daxil edin."
+
+#: raport/validate.py:11
+msgid "Unsupported file extension. Only {} are supported."
+msgstr "Dəstəklənməyən fayl uzantısı. Yalnız {} dəstəklənir."
+
+#: raport/views.py:28
+msgid "Invalid raport ID"
+msgstr "Yanlış hesabat ID-si"
+
+#~ msgid "Comment"
+#~ msgstr "Şərh"
+
+#~ msgid "Contacts"
+#~ msgstr "Əlaqələr"
+
+#~ msgid "creator"
+#~ msgstr "Yaradıcı"
+
+#~ msgid "Pages"
+#~ msgstr "Səhifələr"
+
+#~ msgid "Service Page"
+#~ msgstr "Xidmət səhifəsi"
+
+#~ msgid "Service Details"
+#~ msgstr "Xidmət məlumatları"

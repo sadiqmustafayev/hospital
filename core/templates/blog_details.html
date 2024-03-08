@@ -1,0 +1,81 @@
+{% extends 'index.html' %} {% load i18n %} 
+
+{% block content %}
+<div class="container mt-5">
+<div class="col-12">
+  <div class="blog-wrapper">
+    <div class="blog-left-content">
+      <div class="blog-item blog-item-2 mt-0" data-cues="" data-delay="">
+        <div class="blog-img">
+          <a href="">
+            <img src="{{ blog.image.url }}" alt="" style="width: 70%;">
+          </a>
+        </div>
+        <ul class="blog-meta">
+          <li class="author">
+            <i class="fas fa-user-alt"></i>
+            <span>{{ blog.author }}</span>
+          </li>
+          <li class="meta-date">
+            <i class="fas fa-user-alt"></i>
+            <span>{{ blog.created_at }}</span>
+          </li>
+        </ul>
+        <div class="blog-content">
+          <div style="padding: 15px;">
+            <a>
+              <h3>{{ blog.title }}</h3>
+            </a>
+            <p>{{ blog.description|safe }}</p>
+          </div>
+        </div>
+      </div>
+      <ul class="comment-list">
+        <div style="padding: 15px;">
+          <h3>Comments</h3>
+          {% for comment in blog.comments.all %}
+          <li>
+            <div class="comment-item" onmouseover="showMeta('{{ comment.id }}')" onmouseout="hideMeta('{{ comment.id }}')">
+              <div class="comment-content">
+                <div style="padding: 15px;">
+                  <h3><p style="color: black">{{ comment.text }}</p></h3>
+                  <div id="comment-meta-{{ comment.id }}" class="comment-meta" style="display: none;">
+                    <h6><span>{{ comment.created_at|date:"F d, Y H:i" }} by {{ comment.user.username|lower }} </span></h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          {% empty %}
+          <li>No comments yet.</li>
+          {% endfor %}
+        </div>
+      </ul>
+      <h3>Add Comment</h3>
+      {% if user.is_authenticated %}
+      <form method="post" action="{% url 'add_comment' blog.slug %}">
+        {% csrf_token %}
+        <div class="form-group">
+          <textarea class="form-control" id="comment" name="text" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Add Comment</button>
+      </form>
+      {% else %}
+      <p>You must be <a href="{% url 'login' %}">logged in</a> to post a comment.</p>
+      {% endif %}
+    </div>
+  </div>
+</div>
+</div>
+<script>
+  function showMeta(commentId) {
+    var metaDiv = document.getElementById("comment-meta-" + commentId);
+    metaDiv.style.display = "block";
+  }
+
+  function hideMeta(commentId) {
+    var metaDiv = document.getElementById("comment-meta-" + commentId);
+    metaDiv.style.display = "none";
+  }
+</script>
+{% endblock %}

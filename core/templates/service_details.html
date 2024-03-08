@@ -1,0 +1,180 @@
+{%extends  'index.html'%} {% load i18n %} {%load static%} {% block content %}
+<!-- Banner Section  -->
+<div class="banner-area inner-banner" style="background-image: url('assets/img/bg/bg2.png');">
+	<div class="container">
+		<div class="row align-items-center justify-content-center">
+			<div class="col-12">
+				<div class="breadcrumbs">
+					<nav aria-label="breadcrumb text-center">
+						<h2 class="text-white">Services Details</h2>
+						<ol class="breadcrumb justify-content-center">
+							<li class="breadcrumb-item">
+								<a href="index-2.html">Home</a>
+							</li>
+							<li class="breadcrumb-item active" aria-current="page">Services Details</li>
+						</ol>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Banner Section  -->
+<!-- Counter Section  -->
+<section class="counter-area">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="counter-wrapper counter-wrapper-2">
+					<a href="{% url 'doctor' %}">
+						<div class="counter-item">
+							<h2 class="counter counter-number">{{ doctor_count }} +</h2>
+							<span class="counter-text">Expert Doctors</span>
+						</div>
+					</a>
+					<div class="counter-item">
+						<h2 class="counter counter-number">{{ user_count }}+</h2>
+						<span class="counter-text">Total Registered User</span>
+					</div>
+					<div class="counter-item">
+						<h2 class="counter counter-number">{{ contact_count }}+</h2>
+						<span class="counter-text">Online Contact</span>
+					</div>
+					<div class="counter-item">
+						<h2 class="counter counter-number">{{ report_count }}+</h2>
+						<span class="counter-text">Online Report</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Counter Section  -->
+<!-- Service Details Section  -->
+<div class="service-area-4 section-padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8">
+				<div class="service-details-left">
+					<div class="service-details-img">
+						<img src="assets/img/service/service2.png" alt="">
+					</div>
+					<div class="service-details-content">
+						<h3>Why a Precise Diagnosis is Vital to Treatment</h3>
+						<p>Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomized words which don't look even slightly believable. If you are going to use a passage of lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. all the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with handful of model sentence structures, to generate </p>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the <a href="#">1500s</a>, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+						<p>It has survived not only five centuries, but also the leap electronic typesetting, remaining essentially unchanged. It was popularized in the 1960s.</p>
+					</div>
+					<div class="service-details-content">
+						<h3>What Is a Precise Diagnosis?</h3>
+						<p>Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomized words which don't look even slightly believable. If you are going to use a passage of lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. all the Lorem Ipsum generators on the Internet tend to repeat predefined <a href="#">chunks as necessary</a>, making this the first true generator on the Internet. </p>
+					</div>
+					<div class="service-details-content">
+						<h3>What Are the Latest Diagnostic Methods?</h3>
+						<p>Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomized words which don't look even slightly believable.</p>
+						<ul class="content-list">
+							<li>
+								<i class="fas fa-chevron-right"></i>
+								<span>Diagnostic imaging allows doctors to take internal pictures of the body and its <a href="#">structures</a>
+								</span>
+							</li>
+							<li>
+								<i class="fas fa-chevron-right"></i>
+								<span>Though most cancer cases are not related to genetics, genetic testing is available for individuals.</span>
+							</li>
+							<li>
+								<i class="fas fa-chevron-right"></i>
+								<span>blood tests can be inconclusive and therefore are often used in conjunction with other <a href="#">diagnostic methods.</a>
+								</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4">
+				<div class="sidebar-widget border mt-5 mt-lg-0">
+					<h4 class="sidebar-title">Departments List</h4>
+					<ul class="list-group">
+						<li class="list-group-item">
+							<a href="service-details.html">Precise Diagnosis</a>
+							<i class="fas fa-chevron-right"></i>
+						</li>
+						<li class="list-group-item">
+							<a href="service-details.html">Annual Check-ups</a>
+							<i class="fas fa-chevron-right"></i>
+						</li>
+						<li class="list-group-item">
+							<a href="service-details.html">Dental Implants</a>
+							<i class="fas fa-chevron-right"></i>
+						</li>
+						<li class="list-group-item">
+							<a href="service-details.html">Birthing Care</a>
+							<i class="fas fa-chevron-right"></i>
+						</li>
+						<li class="list-group-item">
+							<a href="service-details.html">Ophthalmology</a>
+							<i class="fas fa-chevron-right"></i>
+						</li>
+						<li class="list-group-item">
+							<a href="service-details.html">Covid Vaccine</a>
+							<i class="fas fa-chevron-right"></i>
+						</li>
+					</ul>
+				</div>
+				<div class="sidebar-widget border mt-5">
+					<h4 class="sidebar-title">Contact Info.</h4>
+					<ul class="contact-list">
+						<li class="contact-list-item">
+							<div class="contact-list-icon">
+								<i class="fas fa-map-marker-alt"></i>
+							</div>
+							<div class="contact-list-text">
+								<span>Themeforest, Envanto HQ 24 Flt. Australia</span>
+							</div>
+						</li>
+						<li class="contact-list-item">
+							<div class="contact-list-icon">
+								<i class="fas fa-phone-alt"></i>
+							</div>
+							<div class="contact-list-text">
+								<span>+00 (00) 123 456 789</span>
+								<span>+00 (00) 123 456 789</span>
+							</div>
+						</li>
+						<li class="contact-list-item">
+							<div class="contact-list-icon">
+								<i class="fas fa-envelope"></i>
+							</div>
+							<div class="contact-list-text">
+								<span>yourdemo@gmail.com</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="sidebar-widget border mt-5">
+					<h4 class="sidebar-title">Working Time.</h4>
+					<ul class="list-group">
+						<li class="list-group-item">
+							<span>Monday - Wednesday</span>
+							<span>6.00 - 10.30</span>
+						</li>
+						<li class="list-group-item">
+							<span>Thursday - Saturday</span>
+							<span>8.00 - 12.00</span>
+						</li>
+						<li class="list-group-item holiday">
+							<div class="list-icon">
+								<svg xmlns="http://www.w3.org/2000/svg" width="38.474" height="38.474" viewBox="0 0 38.474 38.474">
+									<path id="_24_7_icon" data-name="24/7 icon" d="M21.237,23.161a5.771,5.771,0,0,1,4,9.93l-3.674,3.536h5.444v3.847H15.466V37.157l7.1-6.839a1.924,1.924,0,1,0-3.257-1.387H15.466A5.771,5.771,0,0,1,21.237,23.161Zm11.542,0v7.695h3.847V23.161h3.847V40.474H36.626V34.7H28.932V23.161ZM5.847,21.237a15.361,15.361,0,0,0,5.771,12.015V37.9A19.227,19.227,0,0,1,2,21.237ZM21.237,2A19.238,19.238,0,0,1,40.378,19.313h-3.87a15.391,15.391,0,0,0-28-6.733h5.03v3.847H2V4.886H5.847V9.695A19.2,19.2,0,0,1,21.237,2Z" transform="translate(-2 -2)" fill="#21ac7d" />
+								</svg>
+							</div>
+							<span>Sunday - Holiday</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Service Details Section  -->
+</main> {% endblock %}

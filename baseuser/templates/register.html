@@ -1,0 +1,41 @@
+{% extends 'index.html' %} {% load static %} {% block content %}{% load i18n %} <body>
+	<main>
+		<section class="login-area section-padding" style="background-image: url('assets/img/login/bg.png');">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="login-wrapper">
+							<div class="section-title text-lg-start">
+								<h2 class="title wow animate__animated animate__fadeInUp animate__delay-0">
+									<br>
+								</h2>
+							</div>
+							<div class="social-button">
+								<a href="{% url 'social:begin' 'facebook' %}" class="btn btn-blue btn-xl btn-round facebook">
+									<i class="fab fa-facebook-f"></i>Sign in with Facebook </a>
+								<a href="{% url 'social:begin' 'google-oauth2' %}" class="btn btn-blue btn-xl btn-round google">
+									<i class="fab fa-google"></i>Sign in with Google </a>
+							</div>
+							<div class="login-or">
+								<hr>
+								<span>or</span>
+							</div>
+							<form method="POST" action="#"> {% csrf_token %} {% if form.errors %} <div> {% for field in form %} {% for error in field.errors %} <div class="invalid-feedback">
+										{{ error }}
+									</div> {% endfor %} {% endfor %} </div> {% endif %} {% if form.password1.errors %} <div class="alert alert-danger"> {% for error in form.password1.errors %} {{ error }} {% endfor %} </div> {% endif %} {% if form.password2.errors %} <div class="alert alert-danger"> {% for error in form.password2.errors %} {{ error }} {% endfor %} </div> {% endif %} {{ form.as_p }}
+								<div class="section-title text-center text-lg-start mt-5 mt-lg-0" data-cues="slideInRight" data-delay="50">
+									<div class="form-group"></div>
+								</div>
+								<button type="submit" class="btn btn-blue btn-xl btn-round mt-5">Register</button>
+							</form>
+							<img class="shape1" src="{% static 'assets/img/login/Graphic3.png' %}" alt="">
+							<img class="shape2" src="{% static 'assets/img/login/Graphic4.png' %}" alt="">
+							<img class="shape3" src="{% static 'assets/img/login/Graphic.png' %}" alt="">
+							<img class="shape4" src="{% static 'assets/img/login/Graphic2.png' %}" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+</body> {% endblock %}

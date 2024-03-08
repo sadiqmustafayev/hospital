@@ -1,0 +1,43 @@
+{%extends  'index.html'%} {%load static%} {% block content %} {% load i18n %}<body>
+	<main>
+		<!-- Login Section  -->
+		<section class="login-area section-padding" style="background-image: url('assets/img/login/bg.png');">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="login-wrapper">
+							<div class="section-title text-lg-start"></div>
+							<div class="social-button">
+								<a href="{% url 'social:begin' 'facebook' %}" class="btn btn-blue btn-xl btn-round facebook">
+									<i class="fab fa-facebook-f"></i>Sign in with Facebook </a>
+								<a href="{% url 'social:begin' 'google-oauth2' %}" class="btn btn-blue btn-xl btn-round google">
+									<i class="fab fa-google"></i>Sign in with Google </a>
+							</div>
+							<div class="login-or">
+								<hr>
+								<span>or</span>
+							</div>
+							<form method="POST" action="{% url 'login' %}"> {% csrf_token %} {% if form.non_field_errors %} <div class="alert alert-danger"> {% for error in form.non_field_errors %} {{ error }} {% endfor %} </div> {% endif %} <div class="form-group">
+									{{ form.username.label_tag }}
+									{{ form.username }}
+								</div>
+								<div class="form-group">
+									{{ form.password.label_tag }}
+									{{ form.password }}
+								</div>
+								<div class="section-title text-center text-lg-start mt-5 mt-lg-0" data-cues="slideInRight" data-delay="500">
+									<div class="form-group"></div>
+								</div>
+								<button type="submit" class="btn btn-blue btn-xl btn-round mt-5">Login</button>
+							</form>
+							<img class="shape1" src="{% static 'assets/img/login/Graphic3.png' %}" alt="">
+							<img class="shape2" src="{% static 'assets/img/login/Graphic4.png' %}" alt="">
+							<img class="shape3" src="{% static 'assets/img/login/Graphic.png' %}" alt="">
+							<img class="shape4" src="{% static 'assets/img/login/Graphic2.png' %}" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Login Section  -->
+	</main> {% endblock %}

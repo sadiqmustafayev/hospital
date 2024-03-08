@@ -1,0 +1,347 @@
+{%extends 'index.html'%} {%load static%} {% block content %} {% load i18n %}
+<!-- Counter Section  -->
+<section class="counter-area">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="counter-wrapper counter-wrapper-2" data-cues="slideInRight" data-delay="500">
+					<a href="{% url 'doctor' %}">
+						<div class="counter-item">
+							<h2 class="counter counter-number">{{ doctor_count }} +</h2>
+							<span class="counter-text">Expert Doctors</span>
+						</div>
+					</a>
+					<div class="counter-item">
+						<h2 class="counter counter-number">{{ user_count }}+</h2>
+						<span class="counter-text">Total Registered User</span>
+					</div>
+					<div class="counter-item">
+						<h2 class="counter counter-number">{{ contact_count }}+</h2>
+						<span class="counter-text">Online Contact</span>
+					</div>
+					<div class="counter-item">
+						<h2 class="counter counter-number">{{ report_count }}+</h2>
+						<span class="counter-text">Online Report</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Counter Section  -->
+<!-- About Section -->
+<section class="about-area about-area-2 section-padding">
+	<div class="container">
+		<div class="row flex-row-reverse">
+			<div class="col-lg-6">
+				<div class="about-left-content">
+					<div class="about-image">
+						<img src="{% static 'img/about/about2.png' %}" alt="Image">
+						<img src="{% static 'img/shape/circle2.png' %}" alt="Circle Image" class="circle circle1">
+						<img src="{% static 'img/shape/circle.png' %}" alt="Circle Image" class="circle circle2">
+						<img src="{% static 'img/shape/shape12.png' %}" alt="Shape Image" class="shape3">
+					</div>
+					<div class="about-service-list">
+						<ul data-cues="slideInRight" data-delay="500">
+							<li>Expert Doctors</li>
+							<li>Modern Anesthesia</li>
+							<li>Emergency Cases</li>
+							<li>Quality Brackets</li>
+							<li>24/7 Help Center</li>
+							<li>Modern Clinic</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="about-right-content" data-cues="slideInUp" data-delay="500">
+					<div class="section-title">
+						<span class="subtitle">About Us</span>
+						<h2 class="title">Why You Should Trust Us? <br>Get Know About Us </h2>
+					</div>
+					<p class="pt-4">Lorem Ipsum available but the majority have suffered alteration in some form, by injected humour, or randomized words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum need to be sure there isn't anything embarrassing</p>
+					<p class="pt-4">Hidden in the middle of text. the lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first generator on the Internet.</p>
+					<a href="about.html" class="btn btn-blue btn-xl btn-round">Read More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- About Section -->
+<!-- Service Section  -->
+<section class="service-area mt-0">
+	<div class="container">
+		<div class="service-wrapper">
+			<div class="row" data-cues="slideInLeft" data-delay="500">
+				<div class="col-md-6 col-lg-4">
+					<div class="service-item">
+						<div class="service-title">
+							<div class="service-icon">
+								<i class="fas fa-tooth"></i>
+							</div>
+							<h3>Implant Dentistry</h3>
+						</div>
+						<p>Lorem Ipsum available, but the majority have suffered alteration in some form injected humour, or randomized.</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="service-item">
+						<div class="service-title">
+							<div class="service-icon">
+								<i class="bi bi-shield-plus"></i>
+							</div>
+							<h3>Safe Observation</h3>
+						</div>
+						<p>Lorem Ipsum available, but the majority have suffered alteration in some form injected humour, or randomized.</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4 d-md-none d-xl-block">
+					<div class="service-item">
+						<div class="service-title">
+							<div class="service-icon">
+								<i class="bi bi-calendar-check"></i>
+							</div>
+							<h3>Schedule Appointment</h3>
+						</div>
+						<p>Lorem Ipsum available, but the majority have suffered alteration in some form injected humour, or randomized.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Service Section  -->
+<!-- FAQ Section -->
+<section class="faq-area faq-area-2 overflow-hidden section-padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="section-title text-center mb-5" data-cues="slideInUp" data-delay="500">
+					<span class="subtitle">Services</span>
+					<h2 class="title">Our Clinical Services</h2>
+					<p class="pt-3">Lorem Ipsum available but the majority have suffered alteration in some <br> form, by injected humour, or randomized words. </p>
+				</div>
+			</div>
+		</div>
+		<div class="row align-content-center">
+			<div class="col-md-6">
+				<div class="faq-left-content">
+					<div class="faq-img" data-cues="slideInUp" data-delay="500">
+						<img src="{% static 'img/faq/faq2.png' %}" alt="Image">
+						<img src="{% static 'img/shape/shape13.png' %}" alt="Shape" class="shape">
+						<img src="{% static 'img/shape/shape14.png' %}" alt="Shape" class="shape2">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="faq-right-content">
+					<div class="accordion" id="accordionFlushExample" data-cues="slideInRight" data-delay="500">
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="flush-headingOne">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne"> Can I book appointment behalf of someone else? </button>
+							</h2>
+							<div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+								<div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body. </div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="flush-headingTwo">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo"> Do I need a referral to see a physiotherapist? </button>
+							</h2>
+							<div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+								<div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content. </div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="flush-headingThree">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree"> How to book a doctor's consultation for a specific time? </button>
+							</h2>
+							<div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+								<div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application. </div>
+							</div>
+						</div>
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="flush-headingFour">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour"> Do you have venue options for appointments? </button>
+							</h2>
+							<div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+								<div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application. </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- FAQ Section -->
+<!-- Testimonial Area -->
+<section class="testimonial-area section-padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-6 offset-xl-3">
+				<div class="section-title text-center mb-5">
+					<span class="subtitle animate__animated animate__fadeInUp">Testimonial</span>
+					<h2 class="title wow animate__animated animate__fadeInUp animate__delay-1">Our Clinic Customer Reviews</h2>
+					<p class="pt-3 wow animate__animated animate__fadeInUp animate__delay-2">Lorem Ipsum available but the majority have suffered alteration in some form, by injected humour, or randomized words.</p>
+				</div>
+			</div>
+		</div>
+		<div class="swiper testimonial-slider-active">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="testimonial-item">
+						<div class="testimonial-quote">
+							<i class="fas fa-quote-right"></i>
+						</div>
+						<ul class="testimonial-review">
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+						</ul>
+						<p>Lorem Ipsum available, but the majority have suffered alteration in some form by injected humour, or randomized words which don't look even.</p>
+						<div class="testimonial-footer">
+							<div class="author-info">
+								<div class="author-img">
+									<img src="{% static 'img/testimonial/author.png' %}" alt="Author">
+								</div>
+								<div class="author-text">
+									<h4 class="author-name">Jony Bristow</h4>
+									<span>Customer</span>
+								</div>
+							</div>
+							<span class="d-none d-xl-block">Sunday, 24, 8:00 am</span>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="testimonial-item">
+						<div class="testimonial-quote">
+							<i class="fas fa-quote-right"></i>
+						</div>
+						<ul class="testimonial-review">
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+						</ul>
+						<p>Lorem Ipsum available, but the majority have suffered alteration in some form by injected humour, or randomized words which don't look even.</p>
+						<div class="testimonial-footer">
+							<div class="author-info">
+								<div class="author-img">
+									<img src="{% static 'img/testimonial/author2.png' %}" alt="Author">
+								</div>
+								<div class="author-text">
+									<h4 class="author-name">Addison Maya</h4>
+									<span>Customer</span>
+								</div>
+							</div>
+							<span class="d-none d-xl-block">Sunday, 24, 8:00 am</span>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="testimonial-item">
+						<div class="testimonial-quote">
+							<i class="fas fa-quote-right"></i>
+						</div>
+						<ul class="testimonial-review">
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+						</ul>
+						<p>Lorem Ipsum available, but the majority have suffered alteration in some form by injected humour, or randomized words which don't look even.</p>
+						<div class="testimonial-footer">
+							<div class="author-info">
+								<div class="author-img">
+									<img src="{% static 'img/testimonial/author3.png' %}" alt="Author">
+								</div>
+								<div class="author-text">
+									<h4 class="author-name">David Jonson</h4>
+									<span>Customer</span>
+								</div>
+							</div>
+							<span class="d-none d-xl-block">Sunday, 24, 8:00 am</span>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="testimonial-item">
+						<div class="testimonial-quote">
+							<i class="fas fa-quote-right"></i>
+						</div>
+						<ul class="testimonial-review">
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+						</ul>
+						<p>Lorem Ipsum available, but the majority have suffered alteration in some form by injected humour, or randomized words which don't look even.</p>
+						<div class="testimonial-footer">
+							<div class="author-info">
+								<div class="author-img">
+									<img src="{% static 'img/testimonial/author3.png' %}" alt="Author">
+								</div>
+								<div class="author-text">
+									<h4 class="author-name">David Jonson</h4>
+									<span>Customer</span>
+								</div>
+							</div>
+							<span class="d-none d-xl-block">Sunday, 24, 8:00 am</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+	</div>
+	<img src="{% static 'img/shape/shape9.png' %}" alt="Shape" class="shape">
+</section>
+<!-- Testimonial Area -->
+</main> {% endblock %}

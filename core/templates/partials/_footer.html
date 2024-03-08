@@ -1,0 +1,193 @@
+{% load static %} {% load i18n %}    
+<form action="#" >
+	<div class="input-group">
+		<label for="email"></label>
+		<input id="email-input" type="email" class="form-control" placeholder="{% trans 'Enter your email' %}" required aria-label="Recipient's username" aria-describedby="button-addon2">
+		<button id="subscribe-btn" class="btn btn-primary " style="padding-top: 20px;" type="submit">{% trans 'Subscribe Now' %}</button> 
+	</div>
+</form>
+<script>
+	const subscriberLogic = {
+		emailManager(email) {
+			fetch('/api/subscriber/', {
+				method: 'POST',
+				credentials: 'include',
+				headers: {
+					'Content-Type': 'application/json',
+					'X-CSRFToken': '{{ csrf_token }}'
+				},
+				body: JSON.stringify({
+					'email': email,
+				})
+			})
+				.then(response => response.json())
+				.then(data => {
+					console.log('Data:', data);
+				})
+				.catch(error => {
+					console.error('Error:', error);
+				});
+		}
+	}
+
+	const subscribeButton = document.getElementById('subscribe-btn');
+	const emailInput = document.getElementById('email-input');
+
+	subscribeButton.onclick = function (e) {
+		e.preventDefault();
+		const email = emailInput.value;
+		subscriberLogic.emailManager(email);
+		emailInput.value = '';
+	}
+
+</script>  
+<footer class="footer-area">
+	<div class="container">
+		<div class="footer-client-logo">
+			<div class="row">
+				<div class="col-12">
+					<div class="swiper client-slider-active">
+						
+						<div class="swiper-wrapper client-logo-list">
+							<div class="swiper-slide">
+								<img src="{% static 'img/client/client.png' %}" alt="Client Logo">
+							</div>
+							<div class="swiper-slide">
+								<img src="{% static 'img/client/client2.png' %}" alt="Client Logo">
+							</div>
+							<div class="swiper-slide">
+								<img src="{% static 'img/client/client3.png' %}" alt="Client Logo">
+							</div>
+							<div class="swiper-slide">
+								<img src="{% static 'img/client/client4.png' %}" alt="Client Logo">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-top section-padding">
+			<div class="row">
+				<div class="col-md-6 col-lg-4">
+					<div class="footer-widget">
+						<div class="footer-logo">
+							<a href="{% url 'index_2' %}">
+								<img src="{% static 'img/logo2.png' %}" alt="Logo">
+							</a>
+						</div>
+						<p class="text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
+						<div class="footer-contact-info">
+							<div class="icon">
+								<i class="fas fa-map-marked-alt"></i>
+							</div>
+							<span>{{setting.address1}}
+								<br>{{setting.address2}}
+							</span>
+						</div>
+						<div class="footer-contact-info">
+							<div class="icon">
+								<i class="fas fa-phone-alt"></i>
+							</div>
+							<span>
+								<a href="tel:{{setting.number1}}">{{setting.number1}}</a>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-2">
+					<div class="footer-widget footer-padding pt-md-0">
+						<h3 class="footer-title">{% trans 'Our Services' %}</h3>
+						<ul class="footer-links">
+							<li>
+								<a href="{% url 'about' %}">{% trans 'About Us' %}</a>
+							</li>
+							<li>
+								<a href="{% url 'service' %}">{% trans 'Service' %}</a>
+							</li>
+							<li>
+								<a href="{% url 'faq' %}">FAQ's</a>
+							</li>
+							<li>
+								<a href="{% url 'contact' %}">{% trans 'Contact Us' %}</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-2">
+					<div class="footer-widget footer-padding">
+						<h3 class="footer-title">Important Link</h3>
+						<ul class="footer-links">
+							<li>
+								<a href="{% url 'doctor' %}">{% trans 'Doctors' %}</a>
+							</li>
+							<li>
+								<a href="{% url 'appointment' %}">{% trans 'Appointment' %}</a>
+							</li>
+							<li>
+								<a href="{% url 'blog' %}">{% trans 'Blog' %}</a>
+							</li>
+							<li>
+								<a href="{% url 'booking_list' %}">{% trans 'Booking List' %}</a>
+							</li>
+							<li>
+								<a href="{% url 'error' %}">{% trans '404 Page' %}</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4">
+					<div class="footer-widget footer-padding footer-booking-hour">
+						<h3 class="footer-title">Opening Hours</h3>
+						<ul class="footer-info">
+							<li>Monday - Wednesday 6.00 - 10.30 pm</li>
+							<li>Thursday - Saturday 8.00 - 12.00 am</li>
+						</ul>
+						<div class="off-day">
+							<svg xmlns="http://www.w3.org/2000/svg" width="38.474" height="38.474" viewBox="0 0 38.474 38.474">
+								<path id="_24_7_icon" data-name="24/7 icon" d="M21.237,23.161a5.771,5.771,0,0,1,4,9.93l-3.674,3.536h5.444v3.847H15.466V37.157l7.1-6.839a1.924,1.924,0,1,0-3.257-1.387H15.466A5.771,5.771,0,0,1,21.237,23.161Zm11.542,0v7.695h3.847V23.161h3.847V40.474H36.626V34.7H28.932V23.161ZM5.847,21.237a15.361,15.361,0,0,0,5.771,12.015V37.9A19.227,19.227,0,0,1,2,21.237ZM21.237,2A19.238,19.238,0,0,1,40.378,19.313h-3.87a15.391,15.391,0,0,0-28-6.733h5.03v3.847H2V4.886H5.847V9.695A19.2,19.2,0,0,1,21.237,2Z" transform="translate(-2 -2)" fill="#0463fa" />
+							</svg>
+							<span class="btn btn-blue btn-xl btn-round">Sunday - Holiday</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="row align-items-center justify-content-between">
+				<div class="col-md-6 col-lg-7 col-xl-8">
+					<div class="footer-bottom-left">
+						<ul class="footer-social">
+							<li>Follow us:</li>
+							<li>
+								<a href="{{setting.facebook}}">
+									<i class="fab fa-facebook-f"></i>
+								</a>
+							</li>
+							<li>
+								<a href="{{setting.twitter}}">
+									<i class="fab fa-twitter"></i>
+								</a>
+							</li>
+							<li>
+								<a href="{{setting.instagram}}">
+									<i class="fab fa-instagram"></i>
+								</a>
+							</li>
+							<li>
+								<a href={{setting.linkedin}}>
+									<i class="fab fa-linkedin-in"></i>
+								</a>
+							</li>
+						</ul>
+						<hr>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-5 col-xl-4">
+					<div class="footer-copyright">
+						<p>&copy; 2021 All Right Reserved by : {{setting.creator}}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>

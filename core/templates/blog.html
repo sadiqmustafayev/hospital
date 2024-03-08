@@ -1,0 +1,107 @@
+{% extends 'index.html' %} {% load static custom_tags %} {% load i18n %} {% block content %}
+<!-- Blog Section  -->
+<section class="blog-area blog-area-2">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-9"> {% for blog in page_obj %} <div class="col-12">
+					<div class="blog-wrapper">
+						<div class="blog-left-content">
+							<div class="blog-item blog-item-2 mt-0" data-cues="slideInUp" data-delay="300">
+								<div class="blog-img">
+									<a href="{% url 'blog_details' blog.slug %}">
+										<img src="{{ blog.image.url }}" alt="Blog Image">
+									</a>
+								</div>
+								<ul class="blog-meta">
+									<li class="author">
+										<i class="fas fa-user-alt"></i>
+										<span>{{ blog.author }}</span>
+									</li>
+									<li class="meta-date">
+										<i class="fas fa-calendar-alt"></i>
+										<span>{{ blog.created_at|date:"F jS, Y" }}</span>
+									</li>
+								</ul>
+								<div class="blog-content">
+									<a href="{% url 'blog_details' blog.slug %}">
+										<h3>{{ blog.title }}</h3>
+									</a>
+									<p>{{ blog.description|truncatechars:100|safe }}</p>
+									<div class="blog-btn">
+										<a href="{% url 'blog_details' blog.slug %}" class="btn blog-link">Read More <i class="bi bi-arrow-right"></i>
+										</a>
+										<div class="blog-comment-share d-none d-md-block">
+											<span class="comment">
+												<i class="far fa-comments"></i> Comment {{ blog.comments.count }} </span>
+										</div>
+									</div>
+									<hr>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> {% endfor %} <div class="pagination justify-content-center">
+					<span class="step-links"> {% if page_obj.has_previous %} <a href="?page=1">&laquo; first</a>
+						<a href="?page={{ page_obj.previous_page_number }}">previous</a> {% endif %} <span class="current-page"> Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}. </span> {% if page_obj.has_next %} <a href="?page={{ page_obj.next_page_number }}">next</a>
+						<a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a> {% endif %} </span>
+				</div>
+				<style>
+					.pagination {
+						text-align: center;
+						margin-top: 30px;
+					}
+
+					.pagination a {
+						color: #333;
+						display: inline-block;
+						margin-right: 5px;
+						padding: 6px 12px;
+						border: 1px solid #ccc;
+						border-radius: 5px;
+					}
+
+					.pagination a:hover {
+						background-color: #ccc;
+					}
+
+					.pagination .current-page {
+						font-weight: bold;
+						background-color: #333;
+						color: #fff;
+						display: inline-block;
+						padding: 6px 12px;
+						border: 1px solid #ccc;
+						border-radius: 5px;
+					}
+
+					.pagination .step-links a {
+						display: inline-block;
+						margin-right: 5px;
+						padding: 6px 12px;
+						border: 1px solid #ccc;
+						border-radius: 5px;
+					}
+
+					.pagination .step-links a:hover {
+						background-color: #ccc;
+					}
+				</style>
+			</div>
+			<div class="col-lg-3">
+				<div class="sidebar-widget border">
+					<h4 class="sidebar-title">Recent Posts</h4>
+					<ul class="list-group post"> {% get_blogs 0 3 as recent_blogs %} {% for blog in recent_blogs %} <li class="list-group-item post-item">
+							<div class="list-group-img">
+								<a href="{% url 'blog_details' blog.slug %}">
+									<img src="{{ blog.image.url }}" alt="{{ blog.title }}">
+									<p>{{ blog.title }}</p>
+								</a>
+							</div>
+						</li> {% endfor %} </ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Blog Section  -->
+</main> {% endblock %}

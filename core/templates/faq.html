@@ -1,0 +1,284 @@
+{%extends  'index.html'%} {%load static%} {% load i18n %} {% block content %}
+<!-- Banner Section  -->
+<div class="banner-area inner-banner" style="background-image: url('assets/img/bg/bg2.png');">
+	<div class="container">
+		<div class="row align-items-center justify-content-center">
+			<div class="col-12">
+				<div class="breadcrumbs">
+					<nav aria-label="breadcrumb text-center">
+						<h2 class="text-white">Faq</h2>
+						<ol class="breadcrumb justify-content-center">
+							<li class="breadcrumb-item">
+								<a href="index-2.html">Home</a>
+							</li>
+							<li class="breadcrumb-item active" aria-current="page">Faq Page</li>
+						</ol>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Banner Section  -->
+<!-- Counter Section  -->
+<section class="counter-area">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="counter-wrapper counter-wrapper-2" data-cues="slideInRight" data-delay="500">
+					<a href="{% url 'doctor' %}">
+						<div class="counter-item">
+							<h2 class="counter counter-number">{{ doctor_count }} +</h2>
+							<span class="counter-text">Expert Doctors</span>
+						</div>
+					</a>
+					<div class="counter-item">
+						<h2 class="counter counter-number">{{ user_count }}+</h2>
+						<span class="counter-text">Total Registered User</span>
+					</div>
+					<div class="counter-item">
+						<h2 class="counter counter-number">{{ contact_count }}+</h2>
+						<span class="counter-text">Online Contact</span>
+					</div>
+					<div class="counter-item">
+						<h2 class="counter counter-number">{{ report_count }}+</h2>
+						<span class="counter-text">Online Report</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Counter Section  -->
+<!-- FAQ Section -->
+<section class="faq-area faq-area-3 overflow-hidden section-padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-6">
+				<div class="section-title" data-cues="slideInUp" data-delay="400">
+					<span class="subtitle">FAQ</span>
+					<h2 class="title">Frequently Asked Questions</h2>
+					<p class="pt-3">Lorem Ipsum available but the majority have suffered alteration form, by injected humour, or randomised words.</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="faq-right-content">
+					<div class="accordion" id="accordionFlushExample" data-cues="slideInLeft">
+						<div class="accordion-item" data-cue="slideInLeft" data-delay="400">
+							<h2 class="accordion-header" id="flush-headingOne">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne"> Can I book appointment behalf of someone else? </button>
+							</h2>
+							<div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+								<div class="accordion-body">Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of lorem Ipsum you need to be sure there isn't anything.</div>
+							</div>
+						</div>
+						<div class="accordion-item" data-cue="slideInLeft" data-delay="500">
+							<h2 class="accordion-header" id="flush-headingTwo">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo"> Do I need a referral to see a physiotherapist? </button>
+							</h2>
+							<div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+								<div class="accordion-body">Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of lorem Ipsum you need to be sure there isn't anything.</div>
+							</div>
+						</div>
+						<div class="accordion-item" data-cue="slideInLeft" data-delay="600">
+							<h2 class="accordion-header" id="flush-headingThree">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree"> How to book a doctor's consultation for a specific time? </button>
+							</h2>
+							<div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+								<div class="accordion-body">Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of lorem Ipsum you need to be sure there isn't anything.</div>
+							</div>
+						</div>
+						<div class="accordion-item" data-cue="slideInLeft" data-delay="700">
+							<h2 class="accordion-header" id="flush-headingFour">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour"> Do you have venue options for appointments? </button>
+							</h2>
+							<div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+								<div class="accordion-body">Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of lorem Ipsum you need to be sure there isn't anything.</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="faq-left-content" data-cues="slideInRight" data-delay="400">
+					<div class="faq-page-img">
+						<img src="assets/img/faq/faq3.png" alt="Image">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- FAQ Section -->
+<!-- Testimonial Area -->
+<section class="testimonial-area section-padding">
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-6 offset-xl-3">
+				<div class="section-title text-center mb-5">
+					<span class="subtitle ">Testimonial</span>
+					<h2 class="title  animate__delay-1">Our Clinic Customer Reviews</h2>
+					<p class="pt-3  animate__delay-2">Lorem Ipsum available but the majority have suffered alteration in some form, by injected humour, or randomized words.</p>
+				</div>
+			</div>
+		</div>
+		<div class="swiper testimonial-slider-active">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="testimonial-item">
+						<div class="testimonial-quote">
+							<i class="fas fa-quote-right"></i>
+						</div>
+						<ul class="testimonial-review">
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+						</ul>
+						<p>Lorem Ipsum available, but the majority have suffered alteration in some form by injected humour, or randomized words which don't look even.</p>
+						<div class="testimonial-footer">
+							<div class="author-info">
+								<div class="author-img">
+									<img src="assets/img/testimonial/author.png" alt="Author">
+								</div>
+								<div class="author-text">
+									<h4 class="author-name">Jony Bristow</h4>
+									<span>Customer</span>
+								</div>
+							</div>
+							<span class="d-none d-xl-block">Sunday, 24, 8:00 am</span>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="testimonial-item">
+						<div class="testimonial-quote">
+							<i class="fas fa-quote-right"></i>
+						</div>
+						<ul class="testimonial-review">
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+						</ul>
+						<p>Lorem Ipsum available, but the majority have suffered alteration in some form by injected humour, or randomized words which don't look even.</p>
+						<div class="testimonial-footer">
+							<div class="author-info">
+								<div class="author-img">
+									<img src="assets/img/testimonial/author2.png" alt="Author">
+								</div>
+								<div class="author-text">
+									<h4 class="author-name">Addison Maya</h4>
+									<span>Customer</span>
+								</div>
+							</div>
+							<span class="d-none d-xl-block">Sunday, 24, 8:00 am</span>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="testimonial-item">
+						<div class="testimonial-quote">
+							<i class="fas fa-quote-right"></i>
+						</div>
+						<ul class="testimonial-review">
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+						</ul>
+						<p>Lorem Ipsum available, but the majority have suffered alteration in some form by injected humour, or randomized words which don't look even.</p>
+						<div class="testimonial-footer">
+							<div class="author-info">
+								<div class="author-img">
+									<img src="assets/img/testimonial/author3.png" alt="Author">
+								</div>
+								<div class="author-text">
+									<h4 class="author-name">David Jonson</h4>
+									<span>Customer</span>
+								</div>
+							</div>
+							<span class="d-none d-xl-block">Sunday, 24, 8:00 am</span>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="testimonial-item">
+						<div class="testimonial-quote">
+							<i class="fas fa-quote-right"></i>
+						</div>
+						<ul class="testimonial-review">
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+							<li class="review-list">
+								<i class="fas fa-star"></i>
+							</li>
+						</ul>
+						<p>Lorem Ipsum available, but the majority have suffered alteration in some form by injected humour, or randomized words which don't look even.</p>
+						<div class="testimonial-footer">
+							<div class="author-info">
+								<div class="author-img">
+									<img src="assets/img/testimonial/author3.png" alt="Author">
+								</div>
+								<div class="author-text">
+									<h4 class="author-name">David Jonson</h4>
+									<span>Customer</span>
+								</div>
+							</div>
+							<span class="d-none d-xl-block">Sunday, 24, 8:00 am</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+	</div>
+	<img src="assets/img/shape/shape9.png" alt="Shape" class="shape">
+</section>
+<!-- Testimonial Area -->
+</main> {% endblock %}

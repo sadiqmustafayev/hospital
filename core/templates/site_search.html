@@ -1,0 +1,45 @@
+{% extends 'index.html' %}  {% load i18n %} 
+
+{% block content %}
+<div class="container">
+	<div class="row">
+		<div class="col-xl-6 offset-xl-3">
+			<div class="section-title text-center mb-3">
+				<span class="subtitle wow animate__animated animate__fadeInUp">Search results for "{{ query }}"</span>
+			</div>
+		</div>
+	</div>
+
+	{% if doctors %}
+	<div class="row">
+	  <h2 class="col-12">Doctors</h2>
+	  {% for doctor in doctors %}
+		<div class="col-12 col-md-4">
+		  <div class="card mb-4">
+			<img class="card-img-top" src="{{ doctor.image.url }}" alt="{{ doctor.name }}" width="300" height="300">
+			<div class="card-body">
+			  <h5 class="card-title"><a href="{% url 'doctor_details' doctor.slug %}">{{ doctor.name }}</a></h5>
+			  <p class="card-text">{{ doctor.specialization }}</p>
+			</div>
+		  </div>
+		</div>       
+	  {% endfor %}
+	</div>
+  {% endif %}
+  {% if blogs %}
+  <div class="row">
+    <h2 class="col-12">Blogs</h2>
+    {% for blog in blogs %}
+      <div class="col-12 col-md-4">
+        <div class="card mb-4">
+          <img class="card-img-top" src="{{ blog.image.url }}" alt="{{ blog.title }}" width="300" height="300">
+          <div class="card-body">
+            <h5 class="card-title"><a href="{% url 'blog_details' blog.slug %}">{{ blog.title }}</a></h5>
+            <p class="card-text">{{ blog.title }}</p>
+          </div>
+        </div>
+      </div>       
+    {% endfor %}
+  </div>
+{% endif %}
+{% endblock %}

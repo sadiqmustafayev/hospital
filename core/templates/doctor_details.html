@@ -1,0 +1,131 @@
+{%extends  'index.html'%} {%load static%} {% load i18n %} {% block content %}
+<body>
+	<div class="loader-wrapper">
+		<div class="loader"></div>
+		<div class="loader-section section-left"></div>
+		<div class="loader-section section-right"></div>
+	</div>
+	<!-- Banner Section  -->
+	<div class="banner-area inner-banner" style="background-image: url('assets/img/bg/bg2.png');">
+		<div class="container">
+			<div class="row align-items-center justify-content-center">
+				<div class="col-12">
+					<div class="breadcrumbs">
+						<nav aria-label="breadcrumb text-center">
+							<h2 class="text-white">Our Doctor</h2>
+							<ol class="breadcrumb justify-content-center">
+								<li class="breadcrumb-item">
+									<a href="{% url 'index_2' %}">Home</a>
+								</li>
+								<li class="breadcrumb-item active" aria-current="page">Our Doctor</li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Banner Section  -->
+	<!-- Counter Section  -->
+	<section class="counter-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="counter-wrapper counter-wrapper-2">
+						<a href="{% url 'doctor' %}">
+							<div class="counter-item">
+								<h2 class="counter counter-number">{{ doctor_count }} +</h2>
+								<span class="counter-text">Expert Doctors</span>
+							</div>
+						</a>
+						<div class="counter-item">
+							<h2 class="counter counter-number">{{ user_count }}+</h2>
+							<span class="counter-text">Total Registered User</span>
+						</div>
+						<div class="counter-item">
+							<h2 class="counter counter-number">{{ contact_count }}+</h2>
+							<span class="counter-text">Online Contact</span>
+						</div>
+						<div class="counter-item">
+							<h2 class="counter counter-number">{{ report_count }}+</h2>
+							<span class="counter-text">Online Report</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Counter Section  -->
+	<!-- Doctor-start-->
+	<section class="doctor-details-page section-padding">
+		<div class="container">
+			<div class="row gx-30">
+				<div class="col-lg-6">
+					<div class="details-left-content">
+						<div class="doctor-image">
+							<img src="{{ doctor.image.url }}" alt="Doctor Image">
+						</div>
+						<div class="doctor-info d-md-flex align-items-center justify-content-between">
+							<div class="doctor-wrapper">
+								<h3 class="doctor-name">"{{doctor.name}}"</h3>
+								<span class="doctor-designation">"{{doctor.positions}}"</span>
+							</div>
+							<ul class="footer-social">
+								<li>Follow us:</li>
+								<li>
+									<a href="{{ doctor.facebook }}">
+										<i class="fab fa-facebook-f"></i>
+									</a>
+								</li>
+								<li>
+									<a href="{{ doctor.twitter }}">
+										<i class="fab fa-twitter"></i>
+									</a>
+								</li>
+								<li>
+									<a href="{{ doctor.instagram }}">
+										<i class="fab fa-instagram"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="details-right-content">
+
+						<ul class="doctor-details-position">
+							<li>
+								<h4>{% trans 'Positions' %}:</h4>
+								<span>{{doctor.positions}}</span>
+							</li>
+							<li>
+								<h4>{% trans 'Experience' %}:</h4>
+								<span>Almost {{doctor.experience}} Year</span>
+							</li>
+							<li>
+								<h4>{% trans 'Age' %}:</h4>
+								<span>{{doctor.age}}</span>
+							</li>
+							<li>
+								<h4>Email:</h4>
+								<a href="mailto:{{doctor.email}}">{{doctor.email}}</a>
+							</li>
+							<li>
+								<h4>{% trans 'Phone' %}:</h4>
+								<span>
+									<a href="tel:{{doctor.number}}">{{doctor.number}}</a>
+								</span>
+							</li>
+						</ul>
+						<h3 class="pt-5">{% trans 'Educational History' %}</h3>
+						<ul class="doctor-details-list">
+							{{ doctor.educational_history|safe }}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Doctor-end -->
+	</main> {% endblock %}
