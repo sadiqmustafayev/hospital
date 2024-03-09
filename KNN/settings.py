@@ -27,11 +27,9 @@ SECRET_KEY = 'django-insecure-rh87(0_ed1^!%slec7ug!eafc)l_c6yeg*e6&gp&5h@nl@s8t2
 # SECURITY WARNING: don't run with debug turned on in production!
 # settings.py
 DEBUG = True
-<<<<<<< HEAD
-ALLOWED_HOSTS = ['https://sadiqmustafayev.github.io/hospital/','127.0.0.1', 'localhost']
-=======
-ALLOWED_HOSTS = ['sadiqmustafayev.github.io/hospital/','127.0.0.1', 'localhost']
->>>>>>> 5c530c7077314835419ec49976637b8b47a8fac6
+
+ALLOWED_HOSTS = ['sadiqmustafayev.github.io', '127.0.0.1', 'localhost']
+
 
 # # Error handlers
 # handler404 = 'path.to.your.views.error'
