@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-rh87(0_ed1^!%slec7ug!eafc)l_c6yeg*e6&gp&5h@nl@s8t2
 # settings.py
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://sadiqmustafayev.github.io', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['sadiqmustafayev.github.io', '127.0.0.1', 'localhost']
 
 
 # # Error handlers
