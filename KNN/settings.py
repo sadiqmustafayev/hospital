@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-rh87(0_ed1^!%slec7ug!eafc)l_c6yeg*e6&gp&5h@nl@s8t2
 # settings.py
 DEBUG = True
 
-ALLOWED_HOSTS = ['']
+ALLOWED_HOSTS = ['*']
 
 
 # # Error handlers
@@ -190,7 +190,6 @@ USE_TZ = True
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "docs"),
-    '/home/sadiq/Documents/Hospital-Project/hospital/staticfiles/',
 ]
 
 STATIC_URL = '/static/'
